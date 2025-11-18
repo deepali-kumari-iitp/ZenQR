@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZenQR – Ultimate QR Generator</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <h1 class="logo">ZenQR</h1>
+    <div class="top-actions">
+      <button id="themeToggle" class="btn small">🌙</button>
+      <button id="clearHistoryBtn" class="btn small danger">Clear</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <aside class="panel">
+      <h2>Generate QR</h2>
+
+      <label class="label">Enter Text or URL</label>
+      <input id="qrText" class="input" type="text" placeholder="https://example.com" />
+
+      <label class="label">Size</label>
+      <select id="qrSize" class="input">
+        <option value="150">150 × 150</option>
+        <option value="300" selected>300 × 300</option>
+        <option value="500">500 × 500</option>
+        <option value="800">800 × 800</option>
+      </select>
+
+      <div class="row">
+        <div class="col">
+          <label class="label">Foreground</label>
+          <input id="fgColor" type="color" class="input color" value="#000000" />
+        </div>
+
+        <div class="col">
+          <label class="label">Background</label>
+          <input id="bgColor" type="color" class="input color" value="#ffffff" />
+        </div>
+      </div>
+
+      <label class="label">Upload Logo (optional)</label>
+      <input id="logoInput" type="file" class="input" accept="image/*" />
+
+      <button id="removeLogoBtn" class="btn danger small" style="margin-top:10px; display:none;">
+       Remove Logo
+       </button>
+
+
+      <div class="btn-group">
+        <button id="generateBtn" class="btn primary">Generate</button>
+      </div>
+
+      <div class="btn-group">
+        <button id="downloadBtn" class="btn" disabled>Download</button>
+        <button id="copyBtn" class="btn" disabled>Copy</button>
+      </div>
+
+      <div class="btn-group">
+        <button id="saveHistoryBtn" class="btn" disabled>Save</button>
+      </div>
+
+      <div class="btn-group share">
+        <button id="whatsappShare" class="btn small">WA Share</button>
+        <button id="emailShare" class="btn small">Email</button>
+      </div>
+
+      <p id="status" class="muted">Ready.</p>
+    </aside>
+
+    <section class="preview">
+      <h2>Preview</h2>
+      <div id="qrPreview" class="qrPreview">
+        <img id="qrImage" src="" />
+        <img id="logoPreview" class="logoOverlay" src="" style="display:none" />
+      </div>
+
+      <h3 class="mt20">History</h3>
+      <div id="history" class="historyGrid"></div>
+    </section>
+  </main>
+
+  <canvas id="hiddenCanvas" width="800" height="800" style="display:none;"></canvas>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
