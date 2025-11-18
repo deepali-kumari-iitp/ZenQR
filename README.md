@@ -59,8 +59,6 @@ https://deepali-kumari-iitp.github.io/ZenQR/
 ### 🔹 Light Mode  
 <img src="./asset/sspic/lightMode.png" width="450">
 
-### 🔹 Dark Mode  
-<img src="./asset/sspic/darkMode.png" width="450">
 
 ### 🔹 History Section  
 <img src="./asset/sspic/history.png" width="450">
