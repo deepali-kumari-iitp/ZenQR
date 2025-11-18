@@ -7,7 +7,7 @@ It supports logo embedding, color customization, high-resolution export, history
 
 ## 🚀 Live Demo  
 👉 *(Enable GitHub Pages to make this live link work)*  
-
+https://deepali-kumari-iitp.github.io/ZenQR/
 
 ---
 
